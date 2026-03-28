@@ -11,39 +11,33 @@
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <!-- Version control via BOM -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.tribuo</groupId>
-                <artifactId>tribuo-all</artifactId>
-                <version>4.3.2</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <!--Tribuo Core Modules-->
         <dependency>
             <groupId>org.tribuo</groupId>
-            <artifactId>tribuo-core</artifactId>
+            <artifactId>tribuo-all</artifactId>
+            <version>4.3.2</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.tribuo</groupId>
+            <artifactId>tribuo-data</artifactId>
+            <version>4.3.2</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.tribuo</groupId>
             <artifactId>tribuo-classification-core</artifactId>
+            <version>4.3.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.tribuo</groupId>
             <artifactId>tribuo-classification-sgd</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.tribuo</groupId>
-            <artifactId>tribuo-data</artifactId>
+            <version>4.3.1</version>
         </dependency>
 
         <!-- JUnit for tests -->
